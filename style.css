@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+
+}
+
+.card{
+    margin-top: 100px;
+
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-download:hover .fa-xmark{
+    display: block;
+}
+.fa-xmark{
+    border-radius: 3px;
+    position: absolute;
+    right: 5px;
+    top:5px;
+    padding: 3px 3px;
+    color: red;
+    background-color: #494949;
+    display: none;
+    cursor: pointer;
+}
+.input{
+    margin-top: 10px;
+}
+.btn{
+    margin-top: 20px;
+}
+.img-download{
+    position: relative;
+}
+.download-img{
+    position: absolute;
+    bottom: 0px;
+    right:80px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.file-input{
+    display: none;
+}
