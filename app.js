@@ -3,8 +3,9 @@ const fileChange = document.querySelector('.file-input');
 const inputs = document.querySelectorAll('.input');
 const btnSubmit = document.querySelector('.btn');
 const img = document.querySelector('.img');
-let i = 0;
 
+let persons = {}
+let arr = []
 const imgDownload = document.querySelector('.img-download')
 
 
@@ -43,24 +44,21 @@ function changeHandler(ev) {
 }
 
 function dataInfoHandler() {
-    let obj = {}
+
     inputs.forEach(input => {
 
         let placeholderElement = input.getAttribute('placeholder')
 
-        for (const key in obj) {
-            if(obj[key] !== obj[key]){
-                obj[placeholderElement] = input.value
-            }
-        }
 
-
+        persons[placeholderElement] = input.value
 
     });
 
-    ++i
+    arr.push(persons)
+    localStorage.setItem('persons', JSON.stringify(arr))
+    arr = JSON.parse(localStorage.getItem('persons'));
 
-    localStorage.setItem(`person${i}`, JSON.stringify(obj))
+
 
 
 }
